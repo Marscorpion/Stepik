@@ -1,15 +1,11 @@
 
 
-result = [[int(input().split()[1]) for _ in range(int(input()))] for _ in range(int(input()))]
-
-# print(result)
-
-
-# print('YES' if all([any([5 in i for i in result])]) else 'NO')
-
-print(any(map(lambda i: 5 in i, result)))
+def arithmetic_operation(operation):
+    return {'+': lambda x, y: x + y, '-': lambda x, y: x - y, '*': lambda x, y: x * y, '/': lambda x, y: x / y}[
+        operation]
 
 
-
-
-# print('YES' if all(any(['5' in input() for _ in range(int(input()))]) for _ in range(int(input()))) else 'NO')
+add = arithmetic_operation('+')
+div = arithmetic_operation('/')
+print(add(10, 20))
+print(div(20, 5))

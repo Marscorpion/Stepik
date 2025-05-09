@@ -1,5 +1,5 @@
 def greet(name, *args):
-    return f'Hello, {name} and {' and '.join(args)}!' if args else f'Hello, {name}!'
+    return f"Hello, {name} and {' and '.join(args)}!" if args else f'Hello, {name}!'
 
 # def greet(name, *args):
 #     return f'Hello, {" and ".join((name,) + args)}!'
